@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('poseidon')
+angular.module('trees')
 .config(function($stateProvider, $urlRouterProvider){
   $urlRouterProvider.otherwise('/');
 
@@ -10,5 +10,6 @@ angular.module('poseidon')
   .state('faq', {url: '/faq', templateUrl: '/views/general/faq.html'})
   .state('contact', {url: '/contact', templateUrl: '/views/general/contact.html'})
   .state('register', {url: '/register', templateUrl: '/views/users/users.html', controller: 'UsersCtrl'})
-  .state('login', {url: '/login', templateUrl: '/views/users/users.html', controller: 'UsersCtrl'});
+  .state('login', {url: '/login', templateUrl: '/views/users/users.html', controller: 'UsersCtrl'})
+  .state('game', {url: '/game', templateUrl: '/views/game/game.html', controller: 'GameCtrl'});
 });
