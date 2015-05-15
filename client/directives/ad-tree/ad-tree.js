@@ -23,9 +23,13 @@ angular.module('adTreeModule', [])
     $scope.grow = function(){
       Tree.grow($scope.id)
       .then(function(response){
+        console.log('response: ', response);
         $scope.height = response.data.height;
         $scope.health = response.data.health;
         getState();
+        if(response.data.health < 0){
+          $rootScope.deadTree = response.data;
+        }
       });
     };
   };
