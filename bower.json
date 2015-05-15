@@ -1,9 +1,9 @@
 {
-  "name": "poseidon",
+  "name": "Trees",
   "version": "0.0.1",
-  "homepage": "https://github.com/coding-house-apr2015/poseidon",
+  "homepage": "http://andrewtdinh.com",
   "authors": [
-    "Chyld Medford <chyld.medford@gmail.com>"
+    "Andrew T Dinh <AndrewDinh74@gmail.com>"
   ],
   "license": "BSD",
   "dependencies": {
