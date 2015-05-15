@@ -2,4 +2,10 @@
   div height: {{height}}
   div health: {{health}}
   div name: {{state.name}}
+  .progress.progress-striped
+    //- #progressbar.progress-bar.progress-bar-success(style='width: {{health}}%')
+    .progress-bar.progress-bar-success(style='width: {{health}}%', ng-show='success')
+    .progress-bar.progress-bar-warning(style='width: {{health}}%', ng-show='warning')
+    .progress-bar.progress-bar-danger(style='width: {{health}}%', ng-show='danger')
+    //- .progress-bar.progress-bar-danger(style='width: {{health}}%',  ng-show='{{health < 30}}')
   img(ng-src='{{state.url}}', ng-click='grow()')

@@ -10,10 +10,6 @@ angular.module('trees')
       Tree.find()
       .then(function(treeResponse){
         $scope.trees = treeResponse.data.trees;
-        // if($rootScope.deadTree){
-        //   var deadTreeIndex = ($rootScope.deadTree);
-        //   $scope.trees.splice(deadTreeIndex, 1);
-        // }
       });
     });
   }

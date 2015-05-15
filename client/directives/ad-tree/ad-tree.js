@@ -15,6 +15,19 @@ angular.module('adTreeModule', [])
   o.controller = function($rootScope, $scope, $window, Tree){
     function getState(){
       $scope.state = $window._.find($rootScope.lives, function(life){
+        if($scope.health >= 70){
+          $scope.success = true;
+          $scope.danger = false;
+          $scope.warning = false;
+        }else if($scope.health < 30){
+          $scope.danger = true;
+          $scope.success = false;
+          $scope.warning = false;
+        }else{
+          $scope.danger = false;
+          $scope.success = false;
+          $scope.warning = true;
+        }
         return (life.min <= $scope.height && $scope.height <= life.max);
       });
     }
